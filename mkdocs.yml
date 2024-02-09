@@ -1,0 +1,91 @@
+site_name: Курсы
+site_url: https://docs.tedmeadow.ru/
+theme:
+  name: material
+  features:
+    - announce.dismiss
+    - content.action.edit
+    - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    # - content.code.select
+    # - content.footnote.tooltips
+    # - content.tabs.link
+    - content.tooltips
+    # - header.autohide
+    # - navigation.expand
+    - navigation.footer
+    - navigation.indexes
+    # - navigation.instant
+    # - navigation.instant.prefetch
+    # - navigation.instant.progress
+    # - navigation.prune
+    # - navigation.sections
+    - navigation.tabs
+    # - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+    # - toc.integrate
+  language: ru
+  palette:
+    - scheme: dracula
+      toggle:
+        icon: material/toggle-switch-off-outline 
+        name: Switch to dark mode
+      primary: deep purple
+      accent: deep purple 
+    - scheme: slate 
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode    
+      primary: deep purple
+      accent: deep purple
+  font:
+    code: JetBrains Mono
+  favicon: assets/favicon.png
+  logo: assets/favicon.png
+
+plugins:
+  - social
+  - search
+
+extra:
+  social:
+    - icon: fontawesome/brands/telegram
+      link: https://t.me/TedMeadow
+nav:
+  - Домашняя страница: index.md
+  - FastAPI:
+    - fastapi/index.md
+    - Написание своего приложения: 
+      - fastapi/self_tasks_service/index.md
+      - Первые шаги: fastapi/self_tasks_service/base.md
+      - Аргументы: fastapi/self_tasks_service/arguments.md
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.arithmatex:
+      generic: true
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.mark
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - mdx_include:
+      base_path: docs
+
+copyright: |
+  &copy; 2024 <a href="https://github.com/tedmeadow"  target="_blank" rel="noopener">Fedor Lugovoi</a>
